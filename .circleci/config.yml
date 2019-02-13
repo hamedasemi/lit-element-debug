@@ -1,0 +1,41 @@
+version: 2.1
+description: Test and publish to npm.
+
+executors:
+  node:
+    docker:
+      - image: circleci/node:10.0
+      
+commands:
+  install:
+    steps:
+      - run: npm install
+  test: 
+    steps:
+      - run: npm test
+      - run: npm run report
+  publish:
+    steps:
+      - run:
+          name: Authenticate with registry
+          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc 
+      - run: npm publish
+
+jobs:
+  test-and-publish:
+    executor: node
+    steps:
+      - checkout
+      - install
+      - test
+      - publish
+
+workflows:
+  main:
+    jobs:
+      - test-and-publish:
+          filters:
+            tags:
+            only: /^v.*/
+          branches:
+            only: release

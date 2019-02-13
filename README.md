@@ -1,2 +1,2 @@
-# lit-element-debug
-A simple debug for LitElement
+# LitElement Router
+A simple and lightwight LitElement Debug.

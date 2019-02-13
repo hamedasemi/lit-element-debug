@@ -1,0 +1,22 @@
+{
+  "name": "lit-element-debug",
+  "version": "0.0.0-alpha.0",
+  "description": "A simple and lightwight LitElement Debug.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hamedasemi/lit-element-debug.git"
+  },
+  "keywords": [
+    "lit",
+    "element",
+    "debug",
+    "lit-element",
+    "lit-element-debug"
+  ],
+  "author": "hamedabolghasemi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hamedasemi/lit-element-debug/issues"
+  },
+  "homepage": "https://github.com/hamedasemi/lit-element-debug#readme"
+}
